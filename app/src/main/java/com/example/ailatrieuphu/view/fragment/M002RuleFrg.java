@@ -27,7 +27,9 @@ public class M002RuleFrg extends BaseFragment<M002RuleFrgBinding, CommonVM> {
     protected void initView() {
         MediaManager.getInstance().playGame(R.raw.song_rule, mediaPlayer -> MediaManager.getInstance().playGame(R.raw.song_ready, mediaPlayer1 -> showDialog()));
         binding.lnMilestone.startAnimation(AnimationUtils.loadAnimation(context, R.anim.slide_in_left));
-
+        binding.btnHide.setOnClickListener(view -> {
+            showDialog();
+        });
     }
 
     private void showDialog() {
@@ -42,6 +44,8 @@ public class M002RuleFrg extends BaseFragment<M002RuleFrgBinding, CommonVM> {
     }
 
     private void doBack() {
+        MediaManager.getInstance().pauseSong();
+        callback.backToPrevious();
     }
 
     private void doReady() {
