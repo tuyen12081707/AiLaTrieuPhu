@@ -68,7 +68,7 @@ public abstract class BaseFragment<B extends ViewBinding, V extends BaseViewMode
         clickView(v);
     }
 
-    private void clickView(View v) {
+    protected void clickView(View v) {
     }
 
     protected final void notify(String msg) {

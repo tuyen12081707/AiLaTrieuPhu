@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AiLaTrieuPhu</string>
+    <string name="txt_ready">Bạn đã sẵn sàng chơi chưa ?</string>
 </resources>

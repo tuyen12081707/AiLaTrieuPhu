@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.viewbinding.ViewBinding;
 
 
+import com.example.ailatrieuphu.MediaManager;
 import com.example.ailatrieuphu.R;
 import com.example.ailatrieuphu.view.OnMainCallBack;
 import com.example.ailatrieuphu.view.fragment.BaseFragment;
@@ -61,7 +62,7 @@ public abstract class BaseAct<B extends ViewBinding, M extends ViewModel> extend
                 trans.addToBackStack(null);
             }
             trans.setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.pop_enter, R.anim.pop_exit)
-                    .replace(R.id.fr_main, baseFragment, tag)
+                    .replace(R.id.ln_main, baseFragment, tag)
                     .commit();
         } catch (Exception e) {
             e.printStackTrace();
@@ -69,9 +70,17 @@ public abstract class BaseAct<B extends ViewBinding, M extends ViewModel> extend
     }
 
     @Override
-    public void backToPrevious() {
-        onBackPressed();
+    protected void onStart() {
+        super.onStart();
+        MediaManager.getInstance().playSong();
     }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        MediaManager.getInstance().pauseSong();
+    }
+
 
     protected final void notify(String msg) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();

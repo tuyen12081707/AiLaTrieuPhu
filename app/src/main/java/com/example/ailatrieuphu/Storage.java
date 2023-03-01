@@ -1,4 +1,13 @@
 package com.example.ailatrieuphu;
-public class Storage {
 
+import com.example.ailatrieuphu.db.entities.Question;
+
+import java.util.List;
+
+public class Storage {
+    public static List<Question> listQuestion;
+
+    public void setListQuestion(List<Question> listQuestion) {
+        Storage.listQuestion = listQuestion;
+    }
 }
