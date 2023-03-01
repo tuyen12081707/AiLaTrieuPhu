@@ -66,6 +66,11 @@ public class HomeActivity extends BaseAct<ActivityHomeBinding, CommonVM> {
         onBackPressed();
     }
 
+    @Override
+    public void updateUI(Runnable run) {
+        runOnUiThread(run);
+    }
+
 
     @Override
     protected ActivityHomeBinding initViewBinding() {

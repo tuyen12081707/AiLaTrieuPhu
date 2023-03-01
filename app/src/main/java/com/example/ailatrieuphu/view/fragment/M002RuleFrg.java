@@ -1,6 +1,5 @@
 package com.example.ailatrieuphu.view.fragment;
 
-import android.app.Dialog;
 import android.media.MediaPlayer;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -17,6 +16,7 @@ import com.example.ailatrieuphu.viewmodel.CommonVM;
 
 public class M002RuleFrg extends BaseFragment<M002RuleFrgBinding, CommonVM> {
     public static final String TAG = M002RuleFrg.class.getName();
+    private ConfirmDialog dialog;
 
     @Override
     protected Class<CommonVM> getClassViewModel() {
@@ -33,10 +33,10 @@ public class M002RuleFrg extends BaseFragment<M002RuleFrgBinding, CommonVM> {
     }
 
     private void showDialog() {
-        ConfirmDialog dialog = new ConfirmDialog(context, (data, key) -> {
-            if(key.equals(ConfirmDialog.KEY_READY)){
+        dialog = new ConfirmDialog(context, (data, key) -> {
+            if (key.equals(ConfirmDialog.KEY_READY)) {
                 doReady();
-            }else if (key.equals(ConfirmDialog.KEY_BACK)){
+            } else if (key.equals(ConfirmDialog.KEY_BACK)) {
                 doBack();
             }
         });
@@ -49,6 +49,10 @@ public class M002RuleFrg extends BaseFragment<M002RuleFrgBinding, CommonVM> {
     }
 
     private void doReady() {
+        MediaManager.getInstance().playGame(R.raw.song_start, mediaPlayer -> {
+            dialog.dismiss();
+            callback.showFragement(M003PlayFrg.TAG, null, false);
+        });
     }
 
 

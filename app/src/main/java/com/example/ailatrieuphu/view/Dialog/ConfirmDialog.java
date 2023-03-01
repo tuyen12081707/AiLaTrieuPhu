@@ -36,5 +36,6 @@ public class ConfirmDialog extends Dialog {
 
     private void doReady() {
         callBack.callBack(null, KEY_READY);
+        dismiss();
     }
 }
