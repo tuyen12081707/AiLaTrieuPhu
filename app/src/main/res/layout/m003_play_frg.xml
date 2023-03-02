@@ -64,7 +64,7 @@
                 <ProgressBar
                     android:id="@+id/progress_time"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:indeterminate="true"
                     android:indeterminateDrawable="@anim/rotate_circle_time" />
@@ -179,7 +179,7 @@
                 android:textColor="@color/purple_500"
                 android:textSize="20sp" />
 
-            <TextView
+            z<TextView
                 android:id="@+id/tv_question"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -206,7 +206,6 @@
             android:background="@drawable/bg_milestone"
             android:gravity="center"
             android:text="A:Bất tỉnh nhân sự"
-            android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="18sp" />
 
