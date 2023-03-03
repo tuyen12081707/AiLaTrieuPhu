@@ -1,5 +1,6 @@
 package com.example.ailatrieuphu;
 
+import android.media.AudioAttributes;
 import android.media.MediaPlayer;
 
 public class MediaManager {
@@ -21,6 +22,7 @@ public class MediaManager {
             playBG.reset();
         }
         playBG = MediaPlayer.create(App.getInstance(), song);
+        // cuộc gọi đến k dừng được
         playBG.setLooping(true);
         playBG.start();
     }

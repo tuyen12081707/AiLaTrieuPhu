@@ -67,7 +67,8 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:indeterminate="true"
-                    android:indeterminateDrawable="@anim/rotate_circle_time" />
+                    android:indeterminateDrawable="@anim/rotate_circle_time"
+                    android:indeterminateDuration="30000" />
 
                 <TextView
                     android:id="@+id/tv_count_down"
@@ -179,7 +180,9 @@
                 android:textColor="@color/purple_500"
                 android:textSize="20sp" />
 
-            z<TextView
+            z
+
+            <TextView
                 android:id="@+id/tv_question"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -199,11 +202,10 @@
         <TextView
             android:id="@+id/tv_ansA"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_weight="1"
-            android:background="@drawable/bg_milestone"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="15dp"
+            android:background="@drawable/bg_normal"
+            android:clickable="true"
             android:gravity="center"
             android:text="A:Bất tỉnh nhân sự"
             android:textColor="@color/white"
@@ -212,42 +214,37 @@
         <TextView
             android:id="@+id/tv_ansB"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginBottom="20dp"
-            android:layout_weight="1"
-            android:background="@drawable/bg_milestone"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="15dp"
+            android:background="@drawable/bg_normal"
+            android:clickable="true"
             android:gravity="center"
             android:text="A:Bất tỉnh nhân sự"
-            android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="18sp" />
 
         <TextView
             android:id="@+id/tv_ansC"
-
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginBottom="20dp"
-            android:layout_weight="1"
-
-            android:background="@drawable/bg_milestone"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="15dp"
+            android:background="@drawable/bg_normal"
+            android:clickable="true"
             android:gravity="center"
             android:text="A:Bất tỉnh nhân sự"
-            android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="18sp" />
 
         <TextView
             android:id="@+id/tv_ansD"
-
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginBottom="50dp"
-            android:layout_weight="1"
-            android:background="@drawable/bg_milestone"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_normal"
+            android:clickable="true"
             android:gravity="center"
             android:text="A:Bất tỉnh nhân sự"
-            android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="18sp" />
 
