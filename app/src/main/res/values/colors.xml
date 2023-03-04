@@ -12,7 +12,10 @@
     <color name="white">#FFFFFFFF</color>
     <color name="green">#29992F</color>
     <color name="yellow">#D8AF1B</color>
+    <color name="yellow_200">#F1E725</color>
     <color name="orange">#D87F25</color>
     <color name="colorDark">#252424</color>
     <color name="blue">#2886EB</color>
+    <color name="blueMint">#009988</color>
+    <color name="colorDarkALpha">#1A000000</color>
 </resources>

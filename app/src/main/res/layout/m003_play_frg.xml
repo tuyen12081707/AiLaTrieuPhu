@@ -120,47 +120,54 @@
             android:layout_marginTop="20dp"
             android:paddingHorizontal="20dp"
             android:weightSum="5"
+            android:layout_marginHorizontal="20dp"
+
             tools:ignore="UselessLeaf">
 
             <ImageView
+                android:layout_marginRight="10dp"
                 android:id="@+id/iv_stop"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:contentDescription="@string/txt_todo"
-                android:src="@drawable/ic_stop" />
+                android:background="@drawable/ic_stop"
+                android:contentDescription="@string/txt_todo" />
 
             <ImageView
                 android:id="@+id/iv_change_question"
                 android:layout_width="0dp"
+                android:layout_marginRight="10dp"
+
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:contentDescription="@string/txt_todo"
-                android:src="@drawable/ic_help_change_question" />
+                android:background="@drawable/ic_help_change_question"
+                android:contentDescription="@string/txt_todo" />
 
             <ImageView
                 android:id="@+id/iv_5050"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:contentDescription="@string/txt_todo"
-                android:src="@drawable/ic_help_5050" />
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_help_5050"
+                android:contentDescription="@string/txt_todo" />
 
             <ImageView
                 android:id="@+id/iv_audience"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:contentDescription="@string/txt_todo"
-                android:src="@drawable/ic_help_audience" />
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_help_audience"
+                android:contentDescription="@string/txt_todo" />
 
             <ImageView
                 android:id="@+id/iv_call"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:contentDescription="@string/txt_todo"
-                android:src="@drawable/ic_help_call" />
+                android:background="@drawable/ic_help_call"
+                android:contentDescription="@string/txt_todo" />
         </TableRow>
 
         <FrameLayout
@@ -179,9 +186,6 @@
                 android:text="Câu 1"
                 android:textColor="@color/purple_500"
                 android:textSize="20sp" />
-
-            z
-
             <TextView
                 android:id="@+id/tv_question"
                 android:layout_width="match_parent"

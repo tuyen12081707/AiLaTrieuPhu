@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_dialog_audience" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="70dp"
+            android:layout_marginTop="170dp"
+            android:background="@drawable/bg_title_audience"
+            android:elevation="1dp"
+            android:gravity="center"
+            android:text="Ý Kiến Chuyên Gia"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="250dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="90dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_marginBottom="30dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_doctor"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/ic_player_help_call_01" />
+
+                <View
+                    android:layout_width="70dp"
+                    android:layout_height="80dp" />
+
+                <ImageView
+                    android:id="@+id/iv_professor"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/ic_player_help_call_02" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_engineer"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/ic_player_help_call_01" />
+
+                <View
+                    android:layout_width="70dp"
+                    android:layout_height="80dp" />
+                <ImageView
+                    android:id="@+id/iv_teacher"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/ic_player_help_call_02" />
+            </TableRow>
+        </LinearLayout>
+    </FrameLayout>
+
+
+</LinearLayout>
