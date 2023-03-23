@@ -13,6 +13,11 @@ import com.example.ailatrieuphu.R;
 import com.example.ailatrieuphu.databinding.M001MainFrgBinding;
 import com.example.ailatrieuphu.viewmodel.CommonVM;
 
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+
 public class M001MainFrg extends BaseFragment<M001MainFrgBinding, CommonVM>{
     public static final String TAG = M001MainFrg.class.getName();
 

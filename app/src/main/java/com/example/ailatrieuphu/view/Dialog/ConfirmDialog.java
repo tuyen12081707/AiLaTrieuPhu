@@ -2,8 +2,10 @@ package com.example.ailatrieuphu.view.Dialog;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.DialogFragment;
 
 import com.example.ailatrieuphu.OnActionCallBack;
 import com.example.ailatrieuphu.R;
@@ -28,6 +30,7 @@ public class ConfirmDialog extends Dialog {
             doBack();
         });
     }
+
 
     private void doBack() {
         callBack.callBack(null, KEY_BACK);

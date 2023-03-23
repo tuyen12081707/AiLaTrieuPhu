@@ -12,15 +12,16 @@ import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.viewbinding.ViewBinding;
 
-
 import com.example.ailatrieuphu.MediaManager;
 import com.example.ailatrieuphu.R;
+import com.example.ailatrieuphu.view.Dialog.BaseDialog;
+import com.example.ailatrieuphu.view.OnDialogCallBack;
 import com.example.ailatrieuphu.view.OnMainCallBack;
 import com.example.ailatrieuphu.view.fragment.BaseFragment;
 
 import java.lang.reflect.Constructor;
 
-public abstract class BaseAct<B extends ViewBinding, M extends ViewModel> extends AppCompatActivity implements View.OnClickListener, OnMainCallBack {
+public abstract class BaseAct<B extends ViewBinding, M extends ViewModel> extends AppCompatActivity implements View.OnClickListener, OnMainCallBack{
     protected B binding;
     protected M viewModel;
 
@@ -68,6 +69,9 @@ public abstract class BaseAct<B extends ViewBinding, M extends ViewModel> extend
             e.printStackTrace();
         }
     }
+
+
+
 
     @Override
     protected void onStart() {

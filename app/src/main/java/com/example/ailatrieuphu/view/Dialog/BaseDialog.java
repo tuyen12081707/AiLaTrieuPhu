@@ -15,14 +15,19 @@ import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.viewbinding.ViewBinding;
 
-import com.example.ailatrieuphu.OnActionCallBack;
+import com.example.ailatrieuphu.view.OnDialogCallBack;
+import com.example.ailatrieuphu.view.OnMainCallBack;
 
 public abstract class BaseDialog<B extends ViewBinding, V extends ViewModel> extends DialogFragment implements View.OnClickListener {
     protected B binding;
     protected V viewModel;
     protected Context context;
+    protected Object data;
 
 
+    public void setData(Object data) {
+        this.data = data;
+    }
 
     protected abstract Class<V> getClassViewModel();
 

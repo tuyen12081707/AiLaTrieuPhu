@@ -1,6 +1,4 @@
 package com.example.ailatrieuphu.view.fragment;
-
-import android.media.MediaPlayer;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;

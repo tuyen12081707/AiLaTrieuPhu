@@ -17,6 +17,8 @@ import com.example.ailatrieuphu.Storage;
 import com.example.ailatrieuphu.databinding.M003PlayFrgBinding;
 import com.example.ailatrieuphu.db.entities.Question;
 import com.example.ailatrieuphu.view.Dialog.AudienceDialog;
+import com.example.ailatrieuphu.view.Dialog.CallDialog;
+import com.example.ailatrieuphu.view.OnDialogCallBack;
 import com.example.ailatrieuphu.viewmodel.M003PlayVM;
 
 import java.util.List;
@@ -28,6 +30,7 @@ public class M003PlayFrg extends BaseFragment<M003PlayFrgBinding, M003PlayVM> {
     public static final int[] ID_WRONG_ANSWER = {R.raw.song_lose_a, R.raw.song_lose_b, R.raw.song_lose_c, R.raw.song_lose_d};
     private List<Question> questionList;
     private Question q;
+
 
     public Question getQ() {
         return q;
@@ -160,18 +163,24 @@ public class M003PlayFrg extends BaseFragment<M003PlayFrgBinding, M003PlayVM> {
             } else if (v.getId() == R.id.iv_stop) {
                 gameOver();
                 callback.backToPrevious();
-            }else if(v.getId() == R.id.iv_change_question){
+            } else if (v.getId() == R.id.iv_change_question) {
                 viewModel.nextQuestion();
-            }else if(v.getId() == R.id.iv_call){
+            } else if (v.getId() == R.id.iv_call) {
                 MediaManager.getInstance().playGame(R.raw.song_help_call, null);
-                showOption();
+                viewModel.setPaused(true);
+                showOption(Integer.parseInt(q.trueCase));
             }
         }
 
     }
 
-    private void showOption() {
-
+    private void showOption(int answer) {
+        binding.ivCall.setImageResource(R.drawable.bg_call_used);
+        callback.showFragement(CallDialog.TAG,null,true);
+        FragmentManager fm = requireActivity().getSupportFragmentManager();
+        CallDialog dialog = new CallDialog(answer);
+        dialog.show(fm, CallDialog.TAG);
+        viewModel.setPaused(false);
     }
 
     private void openAudience() {

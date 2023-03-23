@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.viewbinding.ViewBinding;
 
+import com.example.ailatrieuphu.view.OnDialogCallBack;
 import com.example.ailatrieuphu.view.OnMainCallBack;
 import com.example.ailatrieuphu.viewmodel.BaseViewModel;
 
